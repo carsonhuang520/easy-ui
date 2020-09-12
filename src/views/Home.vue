@@ -6,7 +6,9 @@
         <h1>Easy UI</h1>
         <h2>一个面向学习者的 UI 框架</h2>
         <p class="actions">
-          <a href="https://github.com" target="_blank">GitHub</a>
+          <a href="https://github.com/carsonhuang520/easy-ui" target="_blank"
+            >GitHub</a
+          >
           <router-link to="/doc">开始</router-link>
         </p>
       </div>

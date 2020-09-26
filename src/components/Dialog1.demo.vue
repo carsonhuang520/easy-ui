@@ -1,42 +1,46 @@
+<demo>
+常规使用
+</demo>
 <template>
   <div>
-    <Button @click="toggle">toggle</Button>
-    <Dialog
-      v-model:visible="visible"
-      :closeOverlay="true"
-      :handleConfirm="handleConfirm"
-      :handleCancel="handleCancel"
-    >
+    <Button @click="toggle">打开对话框</Button>
+    <Dialog v-model:visible="x" :closeOverlay="false" :ok="f1" :cancel="f2">
       <template v-slot:content>
-        <div>first</div>
-        <div>second</div>
+        <strong>hi</strong>
+        <div>hi2</div>
+      </template>
+      <template v-slot:title>
+        <strong>加粗的标题</strong>
       </template>
     </Dialog>
   </div>
 </template>
+
 <script lang="ts">
 import Dialog from "../lib/Dialog.vue"
 import Button from "../lib/Button.vue"
 import { ref } from "vue"
+import { openDialog } from "../lib/openDialog"
 export default {
   components: {
-    Button,
     Dialog,
+    Button,
   },
   setup() {
-    const visible = ref(false)
+    const x = ref(false)
     const toggle = () => {
-      visible.value = !visible.value
+      x.value = !x.value
     }
-    const handleConfirm = () => {
+    const f1 = () => {
       return false
     }
-    const handleCancel = () => {}
-    return { visible, toggle, handleCancel, handleConfirm }
+    const f2 = () => {}
+    return {
+      x,
+      toggle,
+      f1,
+      f2,
+    }
   },
 }
 </script>
-
-<demo>
-第一个例子
-</demo>

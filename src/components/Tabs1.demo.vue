@@ -26,5 +26,5 @@ export default {
 </script>
 
 <demo>
-第一个例子
+常规使用
 </demo>

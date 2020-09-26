@@ -1,10 +1,26 @@
+<demo>
+支持 size
+</demo>
 <template>
   <div>
-    <Button theme="button" level="main">主要链接按钮</Button>
-    <Button theme="button">普通链接按钮</Button>
-    <Button theme="button" level="danger">危险链接按钮</Button>
+    <div>
+      <Button size="big">大大大</Button>
+      <Button>普普通</Button>
+      <Button size="small">小小小</Button>
+    </div>
+    <div>
+      <Button theme="link" size="big">大大大</Button>
+      <Button theme="link">普普通</Button>
+      <Button size="small" theme="link">小小小</Button>
+    </div>
+    <div>
+      <Button size="big" theme="text">大大大</Button>
+      <Button theme="text">普普通</Button>
+      <Button size="small" theme="text">小小小</Button>
+    </div>
   </div>
 </template>
+
 <script lang="ts">
 import Button from "../lib/Button.vue"
 export default {
@@ -13,7 +29,3 @@ export default {
   },
 }
 </script>
-
-<demo>
-第一个例子
-</demo>

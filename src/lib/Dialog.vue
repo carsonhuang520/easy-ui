@@ -4,7 +4,8 @@
     <div class="easy-dialog-wrapper">
       <div class="easy-dialog">
         <header>
-          {{ title }} <span class="easy-dialog-close" @click="close"></span>
+          <slot name="title" />
+          <span class="easy-dialog-close" @click="close"></span>
         </header>
         <main>
           <slot name="content" />

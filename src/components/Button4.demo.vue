@@ -1,8 +1,12 @@
+<demo>
+支持 disabled
+</demo>
 <template>
-  <div>
-    <Button loading>加载中</Button>
-  </div>
+  <Button disabled>禁用按钮</Button>
+  <Button theme="link" disabled>禁用链接按钮</Button>
+  <Button theme="text" disabled>禁用按钮</Button>
 </template>
+
 <script lang="ts">
 import Button from "../lib/Button.vue"
 export default {
@@ -11,7 +15,3 @@ export default {
   },
 }
 </script>
-
-<demo>
-第一个例子
-</demo>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Switch v-model:value="bool" />
+    <Switch v-model:value="bool" disabled />
   </div>
 </template>
 <script lang="ts">
@@ -18,5 +18,5 @@ export default {
 </script>
 
 <demo>
-常规用法
+支持 disabled
 </demo>

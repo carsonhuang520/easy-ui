@@ -1,7 +1,7 @@
 import path from "path"
 import fs from "fs"
 import marked from "marked"
-const mdToJs = (str) => {
+const mdToJs = (str) => { // 将 markdown 转换为 js
   const content = marked(str).replace(/\\/g, "\\\\").replace(/\`/g, "\\`")
   return `export default \`${content}\``
 }
@@ -23,8 +23,8 @@ const transform = ({ code }) => {
 }
 export function md() {
   return {
-    configureServer,
-    transforms: [
+    configureServer, // 用于开发
+    transforms: [    // 用于rollup // 插件
       {
         test(ctx) {
           return ctx.path.endsWith(".md")
